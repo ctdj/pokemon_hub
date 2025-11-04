@@ -29,7 +29,7 @@ let _speciesCache: Array<{ name: string; url: string }> | null = null;
 async function allSpecies(): Promise<Array<{ name: string; url: string }>> {
   if (_speciesCache) return _speciesCache;
   //obtener todas las especies de los Pokemons
-  const response = await fetch("${process.env.POKEAPI_URL}/pokemon-species?limit=2000", { cache: "no-store" });
+  const response = await fetch(`${process.env.POKEAPI_URL}/pokemon-species?limit=2000`, { cache: "no-store" });
   if (!response.ok) throw new TRPCError({ code: "BAD_GATEWAY" });
   
   const data = (await response.json()) as unknown as SpeciesResponse;
