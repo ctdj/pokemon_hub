@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* Tokens Tailwind v4 */
+@theme {
+  /* Base (light) */
+  --color-background: 220 25% 97%;
+  --color-foreground: 220 15% 15%;
+
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 220 15% 15%;
+
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 220 15% 15%;
+
+  --color-primary: 0 85% 60%;
+  --color-primary-foreground: 0 0% 100%;
+
+  --color-secondary: 48 100% 50%;
+  --color-secondary-foreground: 220 15% 15%;
+
+  --color-muted: 220 20% 92%;
+  --color-muted-foreground: 220 10% 50%;
+
+  --color-accent: 210 100% 50%;
+  --color-accent-foreground: 0 0% 100%;
+
+  --color-destructive: 0 84.2% 60.2%;
+  --color-destructive-foreground: 0 0% 100%;
+
+  --color-border: 220 20% 88%;
+  --color-input: 220 20% 88%;
+  --color-ring: 0 85% 60%;
+
+  /* Radius base (úsalo con rounded-[var(--radius)] ) */
+  --radius: 1rem;
+}
+
+/* Variables extra (gradientes, sombras, etc.) */
+@layer base {
+  :root {
+    --gradient-primary: linear-gradient(135deg, hsl(0 85% 60%), hsl(15 90% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(48 100% 50%), hsl(40 100% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 25% 98%));
+
+    --shadow-card: 0 4px 20px -2px hsl(220 15% 15% / 0.08);
+    --shadow-hover: 0 8px 30px -4px hsl(0 85% 60% / 0.25);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* Dark mode: sobrescribe tokens --color-* */
+  .dark {
+    --color-background: 220 20% 12%;
+    --color-foreground: 220 15% 95%;
+
+    --color-card: 220 18% 16%;
+    --color-card-foreground: 220 15% 95%;
+
+    --color-popover: 220 18% 16%;
+    --color-popover-foreground: 220 15% 95%;
+
+    --color-primary: 0 85% 60%;
+    --color-primary-foreground: 0 0% 100%;
+
+    --color-secondary: 48 100% 50%;
+    --color-secondary-foreground: 220 15% 15%;
+
+    --color-muted: 220 15% 20%;
+    --color-muted-foreground: 220 10% 60%;
+
+    --color-accent: 210 100% 50%;
+    --color-accent-foreground: 0 0% 100%;
+
+    --color-destructive: 0 62.8% 50%;
+    --color-destructive-foreground: 0 0% 100%;
+
+    --color-border: 220 15% 25%;
+    --color-input: 220 15% 25%;
+    --color-ring: 0 85% 60%;
+
+    /* Extras en dark */
+    --gradient-primary: linear-gradient(135deg, hsl(0 85% 60%), hsl(15 90% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(48 100% 50%), hsl(40 100% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(220 18% 16%), hsl(220 18% 14%));
+
+    --shadow-card: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
+    --shadow-hover: 0 8px 30px -4px hsl(0 85% 60% / 0.4);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+/* ❌ Quita tu .from-primary manual:
+.from-primary { ... }
+*/
